@@ -8,7 +8,7 @@ namespace SlackifyApp.Model
         {
         }
 
-        public String transform(string input)
+        public String Transform(string input)
         {
             return input;
         }
