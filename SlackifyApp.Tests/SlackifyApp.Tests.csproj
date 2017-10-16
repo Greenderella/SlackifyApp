@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Http\HttpClientTest.cs" />
     <Compile Include="Model\JSONTransformatorTest.cs" />
     <Compile Include="Model\SimpleTransformatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
