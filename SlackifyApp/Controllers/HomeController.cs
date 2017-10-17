@@ -13,16 +13,9 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Configure()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Endpoint = "sarlanga-octubre-final";
 
             return View();
         }
