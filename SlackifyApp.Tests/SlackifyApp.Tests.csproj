@@ -89,6 +89,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Integraciones\DatosSalientes.cs" />
+    <Compile Include="Integraciones\Slack.cs" />
+    <Compile Include="Integraciones\SlackTest.cs" />
     <Compile Include="Model\Http\HttpClientTest.cs" />
     <Compile Include="Model\JSONTransformatorTest.cs" />
     <Compile Include="Model\SimpleTransformatorTest.cs" />
