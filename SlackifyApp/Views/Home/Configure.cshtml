@@ -2,16 +2,15 @@
     ViewBag.Title = "Configuration";
 }
 
-<div class="pure-g contenedor">
+<div class="pure-g container">
     <div class="pure-u-1-4">
         <div class="l-box">
-            <h3> 2 quintos</h3>
+            <h3>Step by step</h3>
             <p>
-                - Acceder a configuracion de Slack, agregar integracion de slash command (estas integraciones no afectan al limite de integraciones del Slack gratuito.
-                - Configurar slash comand, poner token y URL de Slackify en Slack.
-                - Configurar Slackify dependiendo de que pagina se haya elegido.
-                - Probalo!
-                - Remember this, en caso de querer editar algo / Metricas
+                <a class="pure-button button-configuration" href="#">Slack</a>
+                <a class="pure-button button-configuration" href="#">Slash command</a>
+                <a class="pure-button button-configuration" href="#">Slackify</a>
+                <a class="pure-button button-configuration" href="#">Try me!</a>
             </p>
         </div>
     </div>
@@ -32,23 +31,6 @@
                         </div>
                         <a class="pure-button" href="#">Add</a>
 
-                    </fieldset>
-                </form>
-            </div>
-            <h3>Configurar /command</h3>
-            <div>
-                Introducir token proporcionado <a href="https:\\slackify.it">@ViewBag.Endpoint</a> y la siguiente URL:
-                <form class="pure-form pure-form-aligned">
-                    <fieldset>
-                        <div class="pure-control-group">
-                            <label for="token">Token</label>
-                            <input id="token" type="text" placeholder="">
-                        </div>
-                        <div class="pure-control-group">
-                            <label for="token">URL</label>
-                            <input id="token" type="text" placeholder="">
-                        </div>
-                        <a class="pure-button" href="#">Add</a>
                     </fieldset>
                 </form>
             </div>
