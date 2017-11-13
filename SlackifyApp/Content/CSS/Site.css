@@ -58,7 +58,7 @@ re-form label {
 .pure-button {
     background-color: #1f8dd6;
     color: white;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
     border-radius: 5px;
 }
 
@@ -72,7 +72,7 @@ a.pure-button-primary {
 .button-configuration {
     background-color: #4d394b;
     margin: 4px;
-    width: 180px;
+    width: 150px;
 }
 
 .home-menu {
@@ -171,7 +171,7 @@ a.pure-button-primary {
 /* We want to give the content area some more padding */
 .content {
     padding: 1em 1em 3em;
-    background-color: 
+    background-color:
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -197,16 +197,19 @@ a.pure-button-primary {
     }
 
 .container {
-    margin-top: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
+    margin-top: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
     background: #2d3e50;
     color: #aaa;
+}
+
+.pure-table {
+    padding-top: 6em;
 }
 
 /* This is the class used for the footer */
@@ -216,7 +219,6 @@ a.pure-button-primary {
     bottom: 0;
     width: 100%;
     z-index: 20;
-    color: white;
 }
 
 @media (min-width: 48em) {

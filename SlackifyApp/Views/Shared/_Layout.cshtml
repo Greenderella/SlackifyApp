@@ -15,7 +15,7 @@
 <body>
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href=""><img src="https://imgur.com/a/wIUs0" alt="Slackify logo"></a>
+            <a class="pure-menu-heading" href=""><img src="~/Content/Images/logo.png" alt="Slackify logo"></a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Configure", "Configure", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>
             </ul>
@@ -24,8 +24,8 @@
 
     @RenderBody()
 
-    <div class="footer l-box is-center">
-        Soy un footer extraño
+    <div class="footer l-box">
+        <img style="float:right" src="/Content/Images/twitter.png" height="25" width="25"></p>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
