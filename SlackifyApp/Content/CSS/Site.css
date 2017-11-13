@@ -6,7 +6,7 @@
 
 body {
     line-height: 1.7em;
-    color: #2c2d30;
+    color: white;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -29,7 +29,7 @@ label {
 }
 
 .l-box {
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .l-box-lrg {
@@ -118,9 +118,9 @@ a.pure-button-primary {
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
-    width: 100%;
+    width: 93%;
     height: 100%;
-    top: 51px;
+    top: 0px;
     left: 0;
     position: fixed !important;
 }
@@ -165,13 +165,12 @@ a.pure-button-primary {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: white;
+    background: #41294c;
 }
 
 /* We want to give the content area some more padding */
 .content {
-    padding: 1em 1em 3em;
-    background-color:
+    padding: 1em 1em 0em;
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -200,6 +199,24 @@ a.pure-button-primary {
     margin-top: 5em;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.container-pricing {
+    color: black;
+}
+
+.container-table {
+    margin-top: 3em;
+    margin-bottom: 6em;
+    color: black;
+}
+
+.text-pricing {
+    letter-spacing: normal;
+    text-align: justify;
+    margin-left: 1em;
+    margin-right: 1em;
+               
 }
 
 /* This is the class used for the dark-background areas. */

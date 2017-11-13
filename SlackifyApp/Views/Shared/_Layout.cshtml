@@ -18,6 +18,7 @@
             <a class="pure-menu-heading" href=""><img src="~/Content/Images/logo.png" alt="Slackify logo"></a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Configure", "Configure", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>
+                <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Configure", "Configure", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>
             </ul>
         </div>
     </div>
@@ -25,7 +26,7 @@
     @RenderBody()
 
     <div class="footer l-box">
-        <img style="float:right" src="/Content/Images/twitter.png" height="25" width="25"></p>
+        <a href="https://twitter.com/"><img style="float:right" src="/Content/Images/twitter.png" height="25" width="25"></p></a>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
