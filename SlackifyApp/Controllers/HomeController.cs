@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SlackifyApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,13 @@ namespace SlackifyApp.Controllers
 {
     public class HomeController : Controller
     {
+        private DB db;
+
+        public HomeController()
+        {
+            this.db = new DB();
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -21,15 +29,16 @@ namespace SlackifyApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult SaveInfo(string token, string url)
+        public ActionResult SaveInfo(SlackifyConfiguration param)
         {
+            this.db.save(param);
+            ViewBag.CantidadDeConfig = db.cantidad();
             return View("Success");
         }
             
 
         public ActionResult ConfigureSlack()
         {
-
             return View();
         }
 
