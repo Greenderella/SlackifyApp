@@ -15,7 +15,7 @@
 <body>
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href=""><img src="~/Content/Images/logo.png" alt="Slackify logo"></a>
+            <a class="pure-menu-heading" href="@Url.Action("Index", "Home")"><img src="~/Content/Images/logo.png" alt="Slackify logo"></a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Pricing", "Pricing", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>
                 <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Configure", "Configure", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>

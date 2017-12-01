@@ -20,6 +20,19 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult SaveInfo(string token, string url)
+        {
+            return View("Success");
+        }
+            
+
+        public ActionResult ConfigureSlack()
+        {
+
+            return View();
+        }
+
         public ActionResult Pricing()
         {
             return View();

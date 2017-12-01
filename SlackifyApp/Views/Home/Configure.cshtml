@@ -7,8 +7,8 @@
         <div class="l-box">
             <h3 class="configure-title">Step by step</h3>
             <ul class="configure-buttons">
-                <li><a class="pure-button button-configuration" href="#">Slack</a></li>
-                <li><a class="pure-button button-configuration" href="#">Slash command</a></li>
+                <li><a class="pure-button button-configuration" href="@Url.Action("ConfigureSlack", "Home")">Slack</a></li>
+                <li><a class="pure-button button-configuration" href="@Url.Action("Configure", "Home")">Slash command</a></li>
                 <li><a class="pure-button button-configuration" href="#">Slackify</a></li>
                 <li><a class="pure-button button-configuration" href="#">Try me!</a></li>
             </ul>
@@ -19,17 +19,17 @@
             <h3 class="configure-title">Configurar /command</h3>
             <div class="configure-title">
                 Introducir token proporcionado <a href="https:\\slackify.it">@ViewBag.Endpoint</a> y la siguiente URL:
-                <form class="pure-form pure-form-aligned">
+                <form class="pure-form pure-form-aligned" action="@Url.Action("SaveInfo", "Home")" method="post">
                     <fieldset>
                         <div class="pure-control-group">
                             <label for="token">Token</label>
-                            <input id="token" type="text" placeholder="">
+                            <input id="token" name="token" type="text" placeholder="">
                         </div>
                         <div class="pure-control-group">
-                            <label for="token">URL</label>
-                            <input id="token" type="text" placeholder="">
+                            <label for="url">URL</label>
+                            <input id="url" name="url" type="text" placeholder="">
                         </div>
-                        <a class="pure-button" href="#">Add</a>
+                        <input class="pure-button" type="submit" value="Enviar...">
 
                     </fieldset>
                 </form>
