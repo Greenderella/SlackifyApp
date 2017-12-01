@@ -13,7 +13,7 @@ namespace SlackifyApp.Controllers
 
         public HomeController()
         {
-            this.db = new DB();
+            db = new DB();
         }
 
         public ActionResult Index()
@@ -27,6 +27,7 @@ namespace SlackifyApp.Controllers
 
             return View();
         }
+
 
         [HttpPost]
         public ActionResult SaveInfo(SlackifyConfiguration param)

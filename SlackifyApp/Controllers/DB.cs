@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SlackifyApp.Controllers
 {
-    internal class DB
+    public class DB
     {
         private List<SlackifyConfiguration> lista;
 

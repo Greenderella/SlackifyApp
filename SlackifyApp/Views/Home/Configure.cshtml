@@ -21,6 +21,7 @@
                 Introducir token proporcionado <a href="https:\\slackify.it">@ViewBag.Endpoint</a> y la siguiente URL:
                 <form class="pure-form pure-form-aligned" action="@Url.Action("SaveInfo", "Home")" method="post">
                     <fieldset>
+
                         <div class="pure-control-group">
                             <label for="token">Token</label>
                             <input id="token" name="token" type="text" placeholder="">
@@ -29,6 +30,8 @@
                             <label for="url">URL</label>
                             <input id="url" name="url" type="text" placeholder="">
                         </div>
+                        <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
+
                         <input class="pure-button" type="submit" value="Enviar...">
 
                     </fieldset>
