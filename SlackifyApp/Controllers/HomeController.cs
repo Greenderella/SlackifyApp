@@ -11,9 +11,12 @@ namespace SlackifyApp.Controllers
     {
         private DB db;
 
+        public TokenGenerator tokenGenerator { get; private set; }
+
         public HomeController()
         {
             db = new DB();
+            tokenGenerator = new TokenGenerator();
         }
 
         public ActionResult Index()
@@ -23,7 +26,7 @@ namespace SlackifyApp.Controllers
 
         public ActionResult Configure()
         {
-            ViewBag.Endpoint = "sarlanga-octubre-final";
+            ViewBag.Endpoint = tokenGenerator.generate();
 
             return View();
         }
@@ -36,9 +39,13 @@ namespace SlackifyApp.Controllers
             ViewBag.CantidadDeConfig = db.cantidad();
             return View("Success");
         }
-            
 
         public ActionResult ConfigureSlack()
+        {
+            return View();
+        }
+
+         public ActionResult Success()
         {
             return View();
         }
