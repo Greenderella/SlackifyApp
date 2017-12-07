@@ -1,22 +1,14 @@
-﻿using SlackifyApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace SlackifyApp.Controllers
 {
     public class HomeController : Controller
     {
-        private DB db;
-
-        public TokenGenerator tokenGenerator { get; private set; }
+        public TokenGenerator TokenGenerator { get; }
 
         public HomeController()
         {
-            db = new DB();
-            tokenGenerator = new TokenGenerator();
+            TokenGenerator = new TokenGenerator();
         }
 
         public ActionResult Index()
@@ -26,18 +18,9 @@ namespace SlackifyApp.Controllers
 
         public ActionResult Configure()
         {
-            ViewBag.Endpoint = tokenGenerator.generate();
+            ViewBag.Endpoint = TokenGenerator.generate();
 
             return View();
-        }
-
-
-        [HttpPost]
-        public ActionResult SaveInfo(SlackifyConfiguration param)
-        {
-            this.db.save(param);
-            ViewBag.CantidadDeConfig = db.cantidad();
-            return View("Success");
         }
 
         public ActionResult ConfigureSlack()
@@ -45,7 +28,7 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
-         public ActionResult Success()
+        public ActionResult Success()
         {
             return View();
         }

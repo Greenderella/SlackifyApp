@@ -16,8 +16,8 @@ namespace SlackifyApp
 
             routes.MapRoute(
                 name: "Endpoint", // Route name
-                url: "endpoint/{val}", // URL with parameters
-                defaults: new { controller = "Endpoint", action = "process", val = "" }
+                url: "endpoint/{endpoint}", // URL with parameters
+                defaults: new { controller = "Endpoint", action = "Process", endpoint = "" }
             );
 
             routes.MapRoute(

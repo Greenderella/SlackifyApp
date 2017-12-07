@@ -9,9 +9,10 @@ namespace SlackifyApp.Controllers
     public class EndpointController : Controller
     {
         // GET: Endpoint
-        public ActionResult Index()
+        public ActionResult Process(string endpoint)
         {
             Console.WriteLine("Sarlanga");
+            return null;
         }
     }
 }
