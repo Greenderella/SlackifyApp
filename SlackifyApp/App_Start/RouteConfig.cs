@@ -13,11 +13,20 @@ namespace SlackifyApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+                name: "Endpoint", // Route name
+                url: "endpoint/{val}", // URL with parameters
+                defaults: new { controller = "Endpoint", action = "process", val = "" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
         }
+
     }
 }

@@ -166,8 +166,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConfigureController.cs" />
     <Compile Include="Controllers\DB.cs" />
+    <Compile Include="Controllers\EndpointController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TokenGenerator.cs" />
+    <Compile Include="Models\HumongousList.cs" />
     <Compile Include="Models\DataBaseConfigure.cs" />
     <Compile Include="Models\SlackifyConfiguration.cs" />
     <Compile Include="Global.asax.cs">
@@ -223,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Endpoint\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
