@@ -10,19 +10,19 @@ namespace SlackifyApp.Controllers
 {
     public class ConfigureController : ApiController
     {
-        private MovieDBContext db = new MovieDBContext();
+        private ConfigureDBContext _db = new ConfigureDBContext();
 
         // GET: api/Configure
-        public IQueryable<DataBaseConfigure> GetDB()
+        public IQueryable<DataBaseConfigure> GetDb()
         {
-            return db.DB;
+            return _db.DB;
         }
 
         // GET: api/Configure/5
         [ResponseType(typeof(DataBaseConfigure))]
         public IHttpActionResult GetDataBaseConfigure(int id)
         {
-            DataBaseConfigure dataBaseConfigure = db.DB.Find(id);
+            DataBaseConfigure dataBaseConfigure = _db.DB.Find(id);
             if (dataBaseConfigure == null)
             {
                 return NotFound();
@@ -45,11 +45,11 @@ namespace SlackifyApp.Controllers
                 return BadRequest();
             }
 
-            db.Entry(dataBaseConfigure).State = EntityState.Modified;
+            _db.Entry(dataBaseConfigure).State = EntityState.Modified;
 
             try
             {
-                db.SaveChanges();
+                _db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -75,8 +75,8 @@ namespace SlackifyApp.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.DB.Add(dataBaseConfigure);
-            db.SaveChanges();
+            _db.DB.Add(dataBaseConfigure);
+            _db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = dataBaseConfigure.ID }, dataBaseConfigure);
         }
@@ -85,14 +85,14 @@ namespace SlackifyApp.Controllers
         [ResponseType(typeof(DataBaseConfigure))]
         public IHttpActionResult DeleteDataBaseConfigure(int id)
         {
-            DataBaseConfigure dataBaseConfigure = db.DB.Find(id);
+            DataBaseConfigure dataBaseConfigure = _db.DB.Find(id);
             if (dataBaseConfigure == null)
             {
                 return NotFound();
             }
 
-            db.DB.Remove(dataBaseConfigure);
-            db.SaveChanges();
+            _db.DB.Remove(dataBaseConfigure);
+            _db.SaveChanges();
 
             return Ok(dataBaseConfigure);
         }
@@ -101,14 +101,14 @@ namespace SlackifyApp.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }
 
         private bool DataBaseConfigureExists(int id)
         {
-            return db.DB.Count(e => e.ID == id) > 0;
+            return _db.DB.Count(e => e.ID == id) > 0;
         }
     }
 }

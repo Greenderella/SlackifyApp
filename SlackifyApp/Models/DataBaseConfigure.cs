@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 
 namespace SlackifyApp.Models
 {
@@ -11,7 +10,7 @@ namespace SlackifyApp.Models
         public string endpoint { get; set; }
     }
 
-    public class MovieDBContext : DbContext
+    public class ConfigureDBContext : DbContext
     {
         public DbSet<DataBaseConfigure> DB { get; set; }
     }

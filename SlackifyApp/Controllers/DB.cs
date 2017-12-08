@@ -1,26 +1,25 @@
-﻿using System;
-using SlackifyApp.Models;
+﻿using SlackifyApp.Models;
 using System.Collections.Generic;
 
 namespace SlackifyApp.Controllers
 {
-    public class DB
+    public class Db
     {
-        private List<SlackifyConfiguration> lista;
+        private List<SlackifyConfiguration> _lista;
 
-        public DB()
+        public Db()
         {
-            lista = new List<SlackifyConfiguration>();
+            _lista = new List<SlackifyConfiguration>();
         }
 
-        internal void save(SlackifyConfiguration param)
+        internal void Save(SlackifyConfiguration param)
         {
-            lista.Add(param);
+            _lista.Add(param);
         }
 
-        internal dynamic cantidad()
+        internal dynamic Cantidad()
         {
-            return lista.Count;
+            return _lista.Count;
         }
     }
 }

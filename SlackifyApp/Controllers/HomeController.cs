@@ -28,11 +28,6 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
-        public ActionResult Success()
-        {
-            return View();
-        }
-
         public ActionResult Pricing()
         {
             return View();

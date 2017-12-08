@@ -1,0 +1,19 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Admin";
+    Layout = null;
+}
+
+    <ul>
+        @foreach (var item in ViewBag.Configuraciones)
+        {
+            <li>ID: @item.ID
+                <ul>
+                    <li>token: @item.token </li>
+                    <li>url: @item.url </li>
+                    <li>endpoint: @item.endpoint</li>
+                </ul>
+            </li>
+        }
+    </ul>
