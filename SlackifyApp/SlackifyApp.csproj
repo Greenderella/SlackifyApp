@@ -169,6 +169,8 @@
     <Compile Include="Controllers\DB.cs" />
     <Compile Include="Controllers\EndpointController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SlackAttachment.cs" />
+    <Compile Include="Controllers\SlackResponse.cs" />
     <Compile Include="Controllers\TokenGenerator.cs" />
     <Compile Include="Models\HumongousList.cs" />
     <Compile Include="Models\DataBaseConfigure.cs" />

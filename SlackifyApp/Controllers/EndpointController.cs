@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using SlackifyApp.Models;
+using SlackifyApp.Tests.Model.Http;
 
 namespace SlackifyApp.Controllers
 {
@@ -15,7 +13,14 @@ namespace SlackifyApp.Controllers
         public ActionResult Process(string endpoint)
         {
             DataBaseConfigure dataBaseConfigure = _db.DB.First(b => b.endpoint == endpoint);
-            return Json(dataBaseConfigure, JsonRequestBehavior.AllowGet);
+            SimpleHttpClient simpleHttpClient = new SimpleHttpClient();
+
+            string url = dataBaseConfigure.url;
+            string plainText = simpleHttpClient.Get(url);
+            SlackResponse wrappedText = new SlackResponse(plainText);
+            return Json(wrappedText, JsonRequestBehavior.AllowGet);
         }
+
+        
     }
 }
