@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace SlackifyApp.Controllers
 {
@@ -30,6 +31,9 @@ namespace SlackifyApp.Controllers
 
         public ActionResult Slackify()
         {
+            DateTime dateTime = DateTime.Now;
+            ViewBag.Time = dateTime.ToShortTimeString();
+
             return View();
         }
 
