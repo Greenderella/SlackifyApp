@@ -188,8 +188,7 @@
     <Content Include="Content\CSS\bootstrap.css" />
     <Content Include="Content\CSS\bootstrap.min.css" />
     <Content Include="Content\CSS\Site.css" />
-    <Content Include="Content\Images\banana.gif" />
-    <Content Include="Content\Images\file-icons.png" />
+    <Content Include="Content\Images\octopus.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -225,6 +224,7 @@
     <Content Include="Views\Home\Pricing.cshtml" />
     <Content Include="Views\Home\ConfigureSlack.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Home\Slackify.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

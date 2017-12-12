@@ -68,13 +68,13 @@ re-form label {
 }
 
 .pure-button {
-    background-color: #1f8dd6;
+    background-color: #4c9689;
     color: white;
     padding: 0.5em 1em;
     border-radius: 5px;
 }
 
-pure-button-primary {
+.pure-button-primary {
     background: #41294c;
     color: white;
     border-radius: 5px;
@@ -85,6 +85,10 @@ pure-button-primary {
     background-color: #4d394b;
     margin: 4px;
     width: 150px;
+}
+
+.configure-buttons {
+    list-style-type: none;
 }
 
 .home-menu {
@@ -310,4 +314,108 @@ pure-button-primary {
     .splash-head {
         font-size: 300%;
     }
+}
+
+
+
+
+
+
+
+
+.miniSlack .chat {
+    border: 2px solid #2d3e50;
+    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: common-ligatures;
+}
+
+.miniSlack .image {
+    width: 36px;
+    float: left;
+}
+
+.miniSlack .wrapper {
+    padding: 1em;
+}
+
+    .miniSlack .image img {
+        width: 35px;
+        height: 35px;
+        border-radius: 4px;
+        margin: 2px;
+    }
+
+.miniSlack .text {
+    margin-left: 44px;
+    line-height: 1.25;
+}
+
+.miniSlack .text .upper_line .time{
+    color: #717274;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.miniSlack .text .lower_line {
+    color: #717274;
+    font-size: 95%;
+    margin-bottom: 8px;
+}
+
+.miniSlack .msg_input_wrapper {
+    position: relative;
+    flex-grow: 1;
+    min-width: 0
+}
+
+.miniSlack .msg_input_btn {
+    margin-bottom: 1.375rem;
+    margin-left: .5rem;
+    flex-grow: 0;
+    align-self: flex-end;
+    height: 44px;
+    border-radius: .375rem
+}
+
+.miniSlack .msg_input {
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    min-height: 42px;
+    height: 38px;
+    max-height: 180px;
+    border: 2px solid rgba(160,160,162,.7);
+    border-radius: .375rem;
+    outline: 0;
+    background: #fff;
+    resize: none;
+    box-shadow: none;
+    color: #2c2d30;
+    font-size: .9375rem;
+    line-height: 1.2rem;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+    padding: 9px 30px 10px 50px
+}
+
+.miniSlack .plus_button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 38px;
+    padding: 0;
+    border: 2px solid #a0a0a2;
+    background: #fff;
+    color: #a0a0a2;
+    line-height: 38px;
+    text-shadow: none;
+    text-align: center;
+    -webkit-transition: background 50ms,color 50ms;
+    -moz-transition: background 50ms,color 50ms;
+    transition: background 50ms,color 50ms;
+    border-radius: 6px 0 0 6px;
+    font-size: 30px;
 }

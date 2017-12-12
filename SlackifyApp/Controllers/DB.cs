@@ -12,14 +12,5 @@ namespace SlackifyApp.Controllers
             _lista = new List<SlackifyConfiguration>();
         }
 
-        internal void Save(SlackifyConfiguration param)
-        {
-            _lista.Add(param);
-        }
-
-        internal dynamic Cantidad()
-        {
-            return _lista.Count;
-        }
     }
 }

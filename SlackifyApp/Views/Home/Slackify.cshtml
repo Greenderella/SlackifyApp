@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Configuration";
+}
+
+<div class="pure-g container">
+    <div class="pure-u-1-4">
+        <div class="l-box">
+            <h3 class="configure-title">Step by step</h3>
+            <ul class="configure-buttons">
+                <li>
+                    <a class="pure-button button-configuration" href="@Url.Action("ConfigureSlack", "Home")">Slack</a>
+                </li>
+                <li>
+                    <a class="pure-button button-configuration" href="@Url.Action("Configure", "Home")">Slash command</a>
+                </li>
+                <li>
+                    <a class="pure-button button-configuration" href="#">Slackify</a>
+                </li>
+                <li>
+                    <a class="pure-button button-configuration" href="#">Try me!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-3-4">
+
+        <div class="l-box miniSlack">
+            <div class="chat">
+                <div class="wrapper">
+                    <div class="image">
+                        <img src="~/Content/Images/slack_user.png" alt="octopus">
+                    </div>
+                    <div class="text">
+                        <div class="upper_line">
+                            <strong>Alex</strong> <span class="time">19:40</span>
+                        </div>
+                        <div class="lower_line">
+                            Texto que cambia.<br/>
+                            sarlanga
+                        </div>
+                    </div>
+                    <div class="msg_input_wrapper">
+                        <div class="msg_input">Holu!</div>
+                        <button type="button" class="plus_button">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
