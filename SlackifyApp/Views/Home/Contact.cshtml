@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="splash-container">
+    <div class="container container-contact">
+        <h3>Contacto</h3>
+        <p>Acá nos podés dejar tus comentarios.</p>
+
+        <form action="@Url.Action("RecibirContacto", "Home")" method="post">
+
+            <label for="nombre">Nombre: </label><input name="nombre" type="text" placeholder="Ingresá tu nombre..." required>
+            <label for="mail">Mail: </label><input name="mail" type="email" placeholder="Ingresá tu mail..." required>
+            <label for="mensaje">Mensaje: </label><textarea name="mensaje" maxlength="140" required></textarea>
+            <input type="submit" value="Enviar...">
+
+        </form>
+
+    </div>
+</div>
