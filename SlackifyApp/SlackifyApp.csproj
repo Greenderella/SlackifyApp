@@ -172,6 +172,7 @@
     <Compile Include="Controllers\SlackAttachment.cs" />
     <Compile Include="Controllers\SlackResponse.cs" />
     <Compile Include="Controllers\TokenGenerator.cs" />
+    <Compile Include="Models\BasicAuthenticationAttribute .cs" />
     <Compile Include="Models\HumongousList.cs" />
     <Compile Include="Models\DataBaseConfigure.cs" />
     <Compile Include="Models\SlackifyConfiguration.cs" />
@@ -224,7 +225,6 @@
     <Content Include="Views\Home\Pricing.cshtml" />
     <Content Include="Views\Home\ConfigureSlack.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Home\Slackify.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

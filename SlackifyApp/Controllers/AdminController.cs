@@ -5,6 +5,7 @@ using SlackifyApp.Models;
 
 namespace SlackifyApp.Controllers
 {
+    [BasicAuthenticationAttribute("admin", "admin")]
     public class AdminController : Controller
     {
         private ConfigureDBContext _db = new ConfigureDBContext();

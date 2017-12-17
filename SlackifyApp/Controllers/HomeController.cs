@@ -21,19 +21,14 @@ namespace SlackifyApp.Controllers
         {
             ViewBag.Endpoint = TokenGenerator.generate();
 
+            DateTime dateTime = DateTime.Now;
+            ViewBag.Time = dateTime.ToShortTimeString();
+
             return View();
         }
 
         public ActionResult ConfigureSlack()
         {
-            return View();
-        }
-
-        public ActionResult Slackify()
-        {
-            DateTime dateTime = DateTime.Now;
-            ViewBag.Time = dateTime.ToShortTimeString();
-
             return View();
         }
 

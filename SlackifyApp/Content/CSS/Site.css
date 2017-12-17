@@ -13,9 +13,7 @@ body {
     font-variant-ligatures: common-ligatures;
 }
 
-h1, h2, h3, h4, h5, h6, label {
-    color: black;
-}
+h1, h2, h3, h4, h5, h6, label { color: black; }
 
 .pure-img-responsive {
     max-width: 100%;
@@ -35,9 +33,7 @@ h1, h2, h3, h4, h5, h6, label {
     height: 564px;
 }
 
-.l-box {
-    padding: 0.5em;
-}
+.l-box { padding: 0.5em; }
 
 .configure-title {
     color: black;
@@ -46,12 +42,10 @@ h1, h2, h3, h4, h5, h6, label {
 
 .l-box-lrg {
     padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.is-center {
-    text-align: center;
-}
+.is-center { text-align: center; }
 
 re-form label {
     margin: 1em 0 0;
@@ -87,19 +81,15 @@ re-form label {
     width: 150px;
 }
 
-.configure-buttons {
-    list-style-type: none;
-}
+.configure-buttons { list-style-type: none; }
 
 .home-menu {
     padding: 0.5em;
     text-align: center;
-    box-shadow: 0 3px 1px rgba(0,0,0, 0.13);
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.13);
 }
 
-.home-menu {
-    background: white;
-}
+.home-menu { background: white; }
 
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -114,13 +104,9 @@ re-form label {
     font-size: 120%;
 }
 
-.home-menu .pure-menu-selected a {
-    color: white;
-}
+.home-menu .pure-menu-selected a { color: white; }
 
-.home-menu a {
-    color: #fff;
-}
+.home-menu a { color: #fff; }
 
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -155,6 +141,7 @@ re-form label {
 }
 
 /* This is the main heading that appears on the blue section */
+
 .splash-head {
     font-size: 20px;
     color: black;
@@ -166,6 +153,7 @@ re-form label {
 }
 
 /* This is the subheading that appears on the blue section */
+
 .splash-subhead {
     color: black;
     letter-spacing: 0.05em;
@@ -183,15 +171,13 @@ re-form label {
 }
 
 /* We want to give the content area some more padding */
-.content {
-    padding: 1em 1em 2em;
-}
 
-.front-content {
-    padding: 11em 1em 11em;
-}
+.content { padding: 1em 1em 2em; }
+
+.front-content { padding: 11em 1em 11em; }
 
 /* This is the class used for the main content headers (<h2>) */
+
 .content-head {
     font-weight: 400;
     text-transform: uppercase;
@@ -200,18 +186,14 @@ re-form label {
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
-.content-head-ribbon {
-    color: white;
-}
+
+.content-head-ribbon { color: white; }
 
 /* This is the class used for the content sub-headers (<h3>) */
-.content-subhead {
-    color: #4d394b;
-}
 
-    .content-subhead i {
-        margin-right: 7px;
-    }
+.content-subhead { color: #4d394b; }
+
+.content-subhead i { margin-right: 7px; }
 
 .subhead-image img {
     display: block;
@@ -219,9 +201,7 @@ re-form label {
     text-align: center;
 }
 
-.subhead-filler {
-    color: black;
-}
+.subhead-filler { color: black; }
 
 .container {
     margin-top: 5em;
@@ -229,9 +209,7 @@ re-form label {
     padding-right: 1em;
 }
 
-.container-pricing {
-    color: black;
-}
+.container-pricing { color: black; }
 
 .container-table {
     margin-top: 3em;
@@ -242,27 +220,26 @@ re-form label {
 .text-pricing {
     letter-spacing: normal;
     margin-left: 2em;
-    margin-right: 2em; 
+    margin-right: 2em;
 }
 
 /* This is the class used for the dark-background areas. */
+
 .ribbon {
     background: #2d3e50;
     color: #aaa;
 }
 
-.pure-table {
-    padding-top: 6em;
-}
+.pure-table { padding-top: 6em; }
 
 /* This is the class used for the footer */
+
 .footer {
     background: #4c9689;
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 20;
-    
+    z-index: 20;    
 }
 
 .social-media {
@@ -270,50 +247,36 @@ re-form label {
     margin-top: 5px;
 }
 
-    .social-media ul {
-        padding: 0;
-        margin-bottom: 0 !important;
-    }
+.social-media ul {
+    padding: 0;
+    margin-bottom: 0 !important;
+}
 
-    .social-media li {
-        float: left;
-        list-style: none;
-        margin-left: 5px;
-    }
+.social-media li {
+    float: left;
+    list-style: none;
+    margin-left: 5px;
+}
 
 @media (min-width: 48em) {
+    body { font-size: 16px; }
 
-    body {
-        font-size: 16px;
-    }
+    .home-menu { text-align: left; }
 
-    .home-menu {
-        text-align: left;
-    }
-
-        .home-menu ul {
-            float: right;
-        }
+    .home-menu ul { float: right; }
 
     .splash {
         width: 50%;
         height: 50%;
     }
 
-    .splash-head {
-        font-size: 250%;
-    }
+    .splash-head { font-size: 250%; }
 
-    .l-box-lrg {
-        border: none;
-    }
+    .l-box-lrg { border: none; }
 }
 
 @media (min-width: 78em) {
-
-    .splash-head {
-        font-size: 300%;
-    }
+    .splash-head { font-size: 300%; }
 }
 
 
@@ -335,26 +298,29 @@ re-form label {
     float: left;
 }
 
-.miniSlack .wrapper {
-    padding: 1em;
-}
+.miniSlack .wrapper { padding: 1em; }
 
-    .miniSlack .image img {
-        width: 35px;
-        height: 35px;
-        border-radius: 4px;
-        margin: 2px;
-    }
+.miniSlack .image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    margin: 2px;
+}
 
 .miniSlack .text {
     margin-left: 44px;
     line-height: 1.25;
 }
 
-.miniSlack .text .upper_line .time{
+.miniSlack .text .upper_line .time {
     color: #717274;
     font-size: 12px;
     white-space: nowrap;
+}
+
+.miniSlack .text .lower_line em {
+    color: gray;
+    font-style: italic;
 }
 
 .miniSlack .text .lower_line {
@@ -385,7 +351,7 @@ re-form label {
     min-height: 42px;
     height: 38px;
     max-height: 180px;
-    border: 2px solid rgba(160,160,162,.7);
+    border: 2px solid rgba(160, 160, 162, .7);
     border-radius: .375rem;
     outline: 0;
     background: #fff;
@@ -413,9 +379,9 @@ re-form label {
     line-height: 38px;
     text-shadow: none;
     text-align: center;
-    -webkit-transition: background 50ms,color 50ms;
-    -moz-transition: background 50ms,color 50ms;
-    transition: background 50ms,color 50ms;
+    -webkit-transition: background 50ms, color 50ms;
+    -moz-transition: background 50ms, color 50ms;
+    transition: background 50ms, color 50ms;
     border-radius: 6px 0 0 6px;
     font-size: 30px;
 }

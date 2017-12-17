@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Http.Results;
 using SlackifyApp.Models;
 
 namespace SlackifyApp.Controllers
@@ -78,7 +79,7 @@ namespace SlackifyApp.Controllers
             _db.DB.Add(dataBaseConfigure);
             _db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = dataBaseConfigure.ID }, dataBaseConfigure);
+            return Redirect("/Home/Configure#ProximoPaso");
         }
 
         // DELETE: api/Configure/5
