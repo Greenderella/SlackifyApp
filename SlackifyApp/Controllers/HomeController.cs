@@ -29,11 +29,13 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
-<<<<<<< HEAD
         public ActionResult ConfigureSlack()
-=======
+        {
+            return View();
+        }
+
         public ActionResult Contact()
->>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
+
         {
             return View();
         }

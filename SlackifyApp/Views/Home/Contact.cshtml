@@ -1,5 +1,5 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿{
+   ViewBag.Title = "Contact";
 }
 
 <div class="splash-container">
@@ -7,7 +7,7 @@
         <h3>Contacto</h3>
         <p>Acá nos podés dejar tus comentarios.</p>
 
-        <form action="@Url.Action("RecibirContacto", "Home")" method="post">
+        <form action="@Url.Action("RecibirContacto", "Home" )" method="post">
 
             <label for="nombre">Nombre: </label><input name="nombre" type="text" placeholder="Ingresá tu nombre..." required>
             <label for="mail">Mail: </label><input name="mail" type="email" placeholder="Ingresá tu mail..." required>
@@ -17,4 +17,5 @@
         </form>
 
     </div>
+    +
 </div>

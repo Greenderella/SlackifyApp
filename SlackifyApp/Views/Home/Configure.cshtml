@@ -31,31 +31,6 @@
                             <input id="url" name="url" type="text" placeholder="">
                         </div>
 
-                        <div class="l-box miniSlack">
-                            <div class="chat">
-                                <div class="wrapper">
-                                    <div class="image">
-                                        <img src="~/Content/Images/slack_user.png" alt="octopus">
-                                    </div>
-                                    <div class="text">
-                                        <div class="upper_line">
-                                            <strong>Alex</strong> <span class="time">@ViewBag.Time</span>
-                                        </div>
-                                        <div class="lower_line" id="donde_poner">
-                                            <em>Llena la URL para ver como se veria</em>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="msg_input_wrapper">
-                                        <div class="msg_input">Holu!</div>
-                                        <button type="button" class="plus_button">
-                                            +
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
 
                         <input class="pure-button" type="submit" value="Enviar...">
@@ -66,37 +41,3 @@
         </div>
     </div>
 </div>
-
-
-@section scripts
-{
-    <script>
-        function debounce(func, wait, immediate) {
-            var timeout;
-            return function() {
-                var context = this, args = arguments;
-                var later = function() {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                var callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
-        };
-
-        function mostrarTexto(data) {
-            console.log(data);
-        }
-
-        function cuandoCambie() {
-            var url = $('#url').val();
-            $.get(url, null, mostrarTexto);
-
-        }
-
-        $('#url').change(cuandoCambie);
-
-    </script>
-}
