@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6, label { color: black; }
     margin-top: 4em;
 }
 
+<<<<<<< HEAD
 .front-image {
     display: block;
     margin-left: auto;
@@ -34,6 +35,11 @@ h1, h2, h3, h4, h5, h6, label { color: black; }
 }
 
 .l-box { padding: 0.5em; }
+=======
+.l-box {
+    padding: 0.5em;
+}
+>>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
 
 .configure-title {
     color: black;
@@ -126,6 +132,7 @@ re-form label {
     left: 0;
 }
 
+<<<<<<< HEAD
 .splash {
     /* absolute center .splash within .splash-container */
     width: 80%;
@@ -195,20 +202,26 @@ re-form label {
 
 .content-subhead i { margin-right: 7px; }
 
+=======
+>>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
 .subhead-image img {
     display: block;
     margin: auto;
     text-align: center;
 }
 
+<<<<<<< HEAD
 .subhead-filler { color: black; }
 
+=======
+>>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
 .container {
     margin-top: 5em;
     padding-left: 1em;
     padding-right: 1em;
 }
 
+<<<<<<< HEAD
 .container-pricing { color: black; }
 
 .container-table {
@@ -234,12 +247,18 @@ re-form label {
 
 /* This is the class used for the footer */
 
+=======
+>>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
 .footer {
     background: #4c9689;
     position: fixed;
     bottom: 0;
     width: 100%;
+<<<<<<< HEAD
     z-index: 20;    
+=======
+    z-index: 20;
+>>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
 }
 
 .social-media {
@@ -283,6 +302,7 @@ re-form label {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -384,4 +404,17 @@ re-form label {
     transition: background 50ms, color 50ms;
     border-radius: 6px 0 0 6px;
     font-size: 30px;
+=======
+.front-content {
+    padding: 9em 1em 9em;
+}
+
+.container-contact {
+    display: flex;
+    flex-direction: row; /* make main axis horizontal (default setting) */
+    justify-content: center; /* center items horizontally, in this case */
+    align-items: center; /* center items vertically, in this case */
+    height: 300px;
+    margin: 3em;
+>>>>>>> 09bf6f18a092b262db5d2c239c05a7dc09cfc528
 }
