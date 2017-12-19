@@ -29,11 +29,6 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
-        public ActionResult ConfigureSlack()
-        {
-            return View();
-        }
-
         public ActionResult Contact()
 
         {
@@ -49,16 +44,15 @@ namespace SlackifyApp.Controllers
             ViewBag.Mail = mail;
             ViewBag.Mensaje = mensaje;
 
-            //Definimos la conexión al servidor SMTP que vamos a usar
-            //para mandar el mail. Hay que buscar como es en nuestro proveedor.
+            //Definimos la conexión al servidor SMTP que vamos a usar para mandar el mail. Hay que buscar como es en nuestro proveedor.
             SmtpClient clienteSmtp = new SmtpClient("smtp.gmail.com", 587);
-            clienteSmtp.Credentials = new NetworkCredential("testcomunidadit@gmail.com", "testcomit2017");
+            clienteSmtp.Credentials = new NetworkCredential("testslackify@gmail.com", "12345qwerty");
             clienteSmtp.EnableSsl = true;
 
             //Generamos el objeto MAIL a enviar
             MailMessage mailParaAdministrador = new MailMessage();
-            mailParaAdministrador.From = new MailAddress("testcomunidadit@gmail.com", "Test ComunidadIT");
-            mailParaAdministrador.To.Add("testcomunidadit@gmail.com");
+            mailParaAdministrador.From = new MailAddress("testslackify@gmail.com", "Slackify Team");
+            mailParaAdministrador.To.Add("testslackify@gmail.com");
             mailParaAdministrador.Subject = "Nuevo contacto";
             mailParaAdministrador.Body = "Te contactó: " + nombre + "(" + mail + ").\nSu mensaje fue: " + mensaje;
 
@@ -67,7 +61,7 @@ namespace SlackifyApp.Controllers
 
             //vamos a mandarle un mail al usuario que nos dejó el contacto
             MailMessage mailAUsuario = new MailMessage();
-            mailAUsuario.From = new MailAddress("testcomunidadit@gmail.com", "Test ComunidadIT");
+            mailAUsuario.From = new MailAddress("testslackify@gmail.com", "Slackify Team");
             mailAUsuario.To.Add(mail);
             mailAUsuario.Subject = "Gracias por contactarte con nosotros!";
             mailAUsuario.IsBodyHtml = true;
@@ -76,7 +70,13 @@ namespace SlackifyApp.Controllers
             //usamos el mismo objeto cliente smtp que creamos antes
             clienteSmtp.Send(mailAUsuario);
 
-            return View("Gracias");
+            return View("Thanks");
+        }
+
+        public ActionResult Thanks()
+
+        {
+            return View();
         }
     }
 }

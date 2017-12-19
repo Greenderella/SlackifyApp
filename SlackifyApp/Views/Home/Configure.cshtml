@@ -5,38 +5,67 @@
 <div class="pure-g container">
     <div class="pure-u-1-4">
         <div class="l-box">
-            <h3 class="configure-title">Step by step</h3>
+            <div class="configure-title">Step by step</div>
             <ul class="configure-buttons">
-                <li><a class="pure-button button-configuration" href="@Url.Action("ConfigureSlack", "Home")">Slack</a></li>
-                <li><a class="pure-button button-configuration" href="@Url.Action("Configure", "Home")">Slash command</a></li>
-                <li><a class="pure-button button-configuration" href="#">Slackify</a></li>
+                <li><a class="pure-button button-configuration" href="#configure-slack">Slack</a></li>
+                <li><a class="pure-button button-configuration" href="#slash-command">Slash command</a></li>
+                <li><a class="pure-button button-configuration" href="#slackify">Slackify</a></li>
                 <li><a class="pure-button button-configuration" href="#">Try me!</a></li>
-            </ul> 
+            </ul>
         </div>
     </div>
     <div class="pure-u-3-4">
         <div class="l-box">
-            <h3 class="configure-title">Configurar /command</h3>
-            <div class="configure-title">
-                Introducir token proporcionado <a href="#">https://slackify.it/Endpoint/@ViewBag.Endpoint</a> y la siguiente URL:
-                <form class="pure-form pure-form-aligned" action="/api/Configure" method="post">
-                    <fieldset>
+            <div class="l-box">
+                <a class="anchor" id="configure-slack"></a>
+                <h2 class="configure-title">Configurar Slack</h2>
+                <div class="configure-title">
+                    Ingresar en "Gestionar aplicaciones" dentro del menu de configuraciones del canal.
+                    <p><img src="~/Content/Images/ConsigureSlack/slack1.png" align="middle" style="width: 281px; height: 565px;">
+                    </p>
+                    Si la aplicacion de Slash command ya se encuentra instalada, seleccionar "Integraciones personalizadas" y añadir la configuración (estas integraciones no afectan al limite de integraciones del Slack gratuito).
+                    <p><img src="~/Content/Images/ConsigureSlack/slack2.png" align="middle" style="width: 929px; height: 278px;">
+                    </p>
+                    <p><img src="~/Content/Images/ConsigureSlack/slack3.png" align="middle" style="width: 988px; height: 558px;">
+                    </p>
+                    Caso contrario instalar dicha aplicación.
+                    <p><img src="~/Content/Images/ConsigureSlack/slack5.png" align="middle" style="width: 1180px; height: 643px;">
+                    </p>
+                </div>
+            </div>
+            <div class="l-box">
+                <a class="anchor" id="slash-command"></a>
+                <h2 class="configure-title">Configurar /command</h2>
+                <div class="configure-title">
+                    Introducir token: (@ViewBag.Endpoint) y la URL deseada.
+                    <form class="pure-form pure-form-aligned" action="/api/Configure" method="post">
+                        <fieldset>
+                            <div class="pure-control-group">
+                                <label for="token">Token</label>
+                                <input id="token" name="token" type="text" placeholder="">
+                            </div>
+                            <div class="pure-control-group">
+                                <label for="url">URL</label>
+                                <input id="url" name="url" type="text" placeholder="">
+                            </div>
 
-                        <div class="pure-control-group">
-                            <label for="token">Token</label>
-                            <input id="token" name="token" type="text" placeholder="">
-                        </div>
-                        <div class="pure-control-group">
-                            <label for="url">URL</label>
-                            <input id="url" name="url" type="text" placeholder="">
-                        </div>
+                            <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
 
-                        <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
-
-                        <input class="pure-button" type="submit" value="Enviar...">
-
-                    </fieldset>
-                </form>
+                            <input class="pure-button" type="submit" value="Enviar..."> </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="l-box">
+                <a class="anchor" id="slackify"></a>
+                <h2 class="configure-title">Go back to Slack!</h2>
+                <div class="configure-title">
+                    Seleccionar nombre para el comnado.
+                    <p><img src="~/Content/Images/ConsigureSlack/slack6.png" align="middle" style="width: 969px; height: 353px;">
+                    </p>
+                    Introducir la URL <a href="#">https://slackify.it/Endpoint/@ViewBag.Endpoint</a> y guardar la integracion.
+                    <p><img src="~/Content/Images/ConsigureSlack/slack7.png" align="middle" style="width: 1006px; height: 464px;">
+                    </p>
+                </div>
             </div>
         </div>
     </div>

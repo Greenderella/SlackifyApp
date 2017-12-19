@@ -79,7 +79,7 @@ namespace SlackifyApp.Controllers
             _db.DB.Add(dataBaseConfigure);
             _db.SaveChanges();
 
-            return Redirect("/Home/Configure#ProximoPaso");
+            return Redirect("/Home/Configure");
         }
 
         // DELETE: api/Configure/5
