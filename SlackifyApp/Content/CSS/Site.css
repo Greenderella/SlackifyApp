@@ -117,6 +117,14 @@ re-form label {
     left: 0;
 }
 
+.front-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: row; /* make main axis horizontal (default setting) */
+    justify-content: center; /* center items horizontally, in this case */
+    align-items: center; /* center items vertically, in this case */
+}
+
 .subhead-image img {
     display: block;
     margin: auto;
@@ -186,14 +194,6 @@ re-form label {
     }
 }
 
-.container-contact {
-    display: flex;
-    flex-direction: row; /* make main axis horizontal (default setting) */
-    justify-content: center; /* center items horizontally, in this case */
-    align-items: center; /* center items vertically, in this case */
-    margin: 3em;
-}
-
 .front-content {
     padding: 9em 1em 9em;
 }
@@ -201,7 +201,7 @@ re-form label {
 a.anchor {
     display: block;
     position: relative;
-    top: -77px;
+    top: -95px;
     visibility: hidden;
 }
 
@@ -381,4 +381,11 @@ textarea {
 
 .pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
     color: #323648;
+    font-weight: bold;
+}
+
+.l-box.sidebar {
+    position: fixed;
+    top: 90px;
+    left: 6px;
 }
