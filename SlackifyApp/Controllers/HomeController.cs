@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using System.Web.DynamicData;
+using System.Web.Http;
+using System.Web.Http.Description;
 using System.Web.Mvc;
+using SlackifyApp.Models;
 
 namespace SlackifyApp.Controllers
 {
     public class HomeController : Controller
     {
+        private ConfigureDBContext _db = new ConfigureDBContext();
+
         public TokenGenerator TokenGenerator { get; }
 
         public HomeController()
@@ -21,12 +27,27 @@ namespace SlackifyApp.Controllers
 
         public ActionResult Configure()
         {
-            ViewBag.Endpoint = TokenGenerator.generate();
-
-            DateTime dateTime = DateTime.Now;
-            ViewBag.Time = dateTime.ToShortTimeString();
-
+            ViewBag.Endpoint = ObtenerToken();
             return View();
+        }
+
+        private string ObtenerToken()
+        {
+            if (Request.QueryString["endpoint"] != null)
+            {
+                return Request.QueryString["endpoint"];
+            }
+            return TokenGenerator.generate();
+        }
+
+        [System.Web.Mvc.HttpPost]
+        public ActionResult AgregarALaDB(DataBaseConfigure dataBaseConfigure)
+        {
+
+            _db.DB.Add(dataBaseConfigure);
+            _db.SaveChanges();
+
+            return Redirect("/Home/Configure?endpoint="+dataBaseConfigure.endpoint+"#slackify"); //query params para todos y todas
         }
 
         public ActionResult Contact()
@@ -35,7 +56,7 @@ namespace SlackifyApp.Controllers
             return View();
         }
 
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         public ActionResult RecibirContacto(string nombre,
                                string mail, string mensaje)
         {

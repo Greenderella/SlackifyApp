@@ -34,7 +34,7 @@
                 <h2 class="configure-title">Configurar /command</h2>
                 <div class="configure-title">
                     Introducir token: (@ViewBag.Endpoint) y la URL deseada.
-                    <form class="pure-form pure-form-aligned" action="/api/Configure" method="post">
+                    <form class="pure-form pure-form-aligned" action="/Home/AgregarALaDB" method="post">
                         <fieldset>
                             <div class="pure-control-group">
                                 <label for="token">Token</label>
@@ -46,8 +46,16 @@
                             </div>
 
                             <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
+                            
+                            @{
+                                string Disabled = "";
+                                if (Request.QueryString["endpoint"] != null)
+                                {
+                                    Disabled = "disabled";
+                                }
+                            }
 
-                            <input class="pure-button" type="submit" value="Enviar..."> </fieldset>
+                            <input class="pure-button" type="submit" value="Enviar" @Disabled> </fieldset>
                     </form>
                 </div>
             </div>
