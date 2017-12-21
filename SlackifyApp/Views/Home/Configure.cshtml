@@ -18,13 +18,13 @@
                 <a class="anchor" id="configure-slack"></a>
                 <h2 class="configure-title">Configurar Slack</h2>
                 <div class="configure-title">
-                    Ingresar en "Gestionar aplicaciones" dentro del menu de configuraciones del canal.
-                    <p><img src="~/Content/Images/ConsigureSlack/slack1.png" align="middle" style="width: 281px; height: 565px;"></p>
-                    Si la aplicacion de Slash command ya se encuentra instalada, seleccionar "Integraciones personalizadas" y añadir la configuración (estas integraciones no afectan al limite de integraciones del Slack gratuito).
+                    Ingresar en <i>Gestionar aplicaciones</i> dentro del menu de configuraciones del canal. Si la aplicacion de Slash command ya se encuentra instalada, seleccionar
+                    <i>Integraciones personalizadas</i> y añadir la configuración (estas integraciones no afectan al limite de integraciones del Slack gratuito).
                     <p><img src="~/Content/Images/ConsigureSlack/slack2.png" align="middle" style="width: 929px; height: 278px;"></p>
                     <p><img src="~/Content/Images/ConsigureSlack/slack3.png" align="middle" style="width: 988px; height: 558px;"></p>
                     Caso contrario instalar dicha aplicación.
-                    <p><img src="~/Content/Images/ConsigureSlack/slack5.png" align="middle" style="width: 1180px; height: 643px;">
+                    <p>
+                        <img src="~/Content/Images/ConsigureSlack/slack5.png" align="middle" style="width: 1180px; height: 643px;">
                     </p>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                             </div>
 
                             <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
-                            
+
                             @{
                                 string Disabled = "";
                                 if (Request.QueryString["endpoint"] != null)
@@ -54,7 +54,8 @@
                                 }
                             }
 
-                            <input class="pure-button submit" type="submit" value="Enviar" @Disabled> </fieldset>
+                            <input class="pure-button submit" type="submit" value="Enviar" @Disabled>
+                        </fieldset>
                     </form>
                 </div>
             </div>
@@ -63,10 +64,12 @@
                 <h2 class="configure-title">Go back to Slack!</h2>
                 <div class="configure-title">
                     Seleccionar nombre para el comnado.
-                    <p><img src="~/Content/Images/ConsigureSlack/slack6.png" align="middle" style="width: 969px; height: 353px;">
+                    <p>
+                        <img src="~/Content/Images/ConsigureSlack/slack6.png" align="middle" style="width: 969px; height: 353px;">
                     </p>
                     Introducir la URL <a href="#">https://slackify.it/Endpoint/@ViewBag.Endpoint</a> y guardar la integracion.
-                    <p><img src="~/Content/Images/ConsigureSlack/slack7.png" align="middle" style="width: 1006px; height: 464px;">
+                    <p>
+                        <img src="~/Content/Images/ConsigureSlack/slack7.png" align="middle" style="width: 1006px; height: 464px;">
                     </p>
                 </div>
             </div>

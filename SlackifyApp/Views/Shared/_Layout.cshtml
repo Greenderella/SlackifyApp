@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     @Styles.Render("~/Content/CSS/Site.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="@Url.Action("Index", "Home")"><img src="~/Content/Images/logo.png" alt="Slackify logo"></a>
+            <a class="pure-menu-heading" href="@Url.Action("Index", "Home")">
+                <span class="logo"><span class="icon">/</span><span class="text">Slackify</span></span>
+            </a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Configure", "Configure", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>
                 <li class="pure-menu-item pure-menu-selected">@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "pure-menu-link" })</li>    
@@ -26,10 +29,10 @@
     @RenderBody()
 
     <div class="footer l-box">
-        <ul class="social-media">
-            <li><a href="https://twitter.com/Ale_Kaly"><img src="/Content/Images/twitter.png" height="25" width="25"></a></li>
-            <li><a href="https://github.com/Greenderella/"><img src="/Content/Images/github.png" height="25" width="25"></a></li>
-        </ul>
+        <span class="social-media">
+            <a href="https://twitter.com/Ale_Kaly"><img src="/Content/Images/twitter.png" height="25" width="25"></a>
+            <a href="https://github.com/Greenderella/"><img src="/Content/Images/github.png" height="25" width="25"></a>
+        </span>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
