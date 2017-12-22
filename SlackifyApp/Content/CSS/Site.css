@@ -139,6 +139,7 @@ re-form label {
 
 .subhead-tittle {
     font-size: 35px;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 }
 
 .container {
@@ -201,6 +202,8 @@ a.anchor {
     visibility: hidden;
 }
 
+/*Contact page shenanigan*/
+
 .contact-header {
     font-size: 4em;
     margin-top: 37px;
@@ -211,10 +214,6 @@ a.anchor {
 .contact-hr {
     border-top: 1px solid #bfbfbf;
 }
-
-
-
-
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #aca49c;
@@ -252,8 +251,6 @@ input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
     color: #bbb5af;
 }
 
-/* on hover placeholder */
-
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
     color: #e2dedb;
     font-size: 0.875em;
@@ -288,19 +285,6 @@ input:hover::placeholder, textarea:hover::placeholder {
 
 input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
     color: #cbc6c1;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-    color: #323648;
-}
-
-header {
-    position: relative;
-    margin: 100px 0 25px 0;
-    font-size: 2.3em;
-    text-align: center;
-    letter-spacing: 7px;
 }
 
 #form {
@@ -370,6 +354,8 @@ textarea {
     #submit:hover {
         color: #e2dedb;
     }
+
+/*END of Contact page shenanigan*/
 
 .pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
     color: #323648;
