@@ -181,7 +181,6 @@
     </Compile>
     <Compile Include="Models\Http\SimpleHttpClient.cs" />
     <Compile Include="Models\Integraciones\DatosSalientes.cs" />
-    <Compile Include="Models\JSONTransformator.cs" />
     <Compile Include="Models\SimpleTransformator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

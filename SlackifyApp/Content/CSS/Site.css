@@ -14,7 +14,7 @@ body {
 }
 
 .pure-g [class *= "pure-u"] {
-    font-family: 'Lato';
+    font-family: 'Lato' !important;
 }
 
 .pure-img-responsive {
@@ -378,4 +378,9 @@ textarea {
     font-family: 'Lobster', cursive;
     text-transform: none;
     font-size: 120%;
+}
+
+.container-contact {
+    text-align: center;
+    margin-top: 4em;
 }
