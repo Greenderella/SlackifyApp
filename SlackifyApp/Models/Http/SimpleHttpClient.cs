@@ -7,8 +7,15 @@ namespace SlackifyApp.Tests.Model.Http
     {
         public string Get(string url)
         {
-            HttpResponseMessage response = this.GetAsync(BaseAddress + url).Result;
-            return response.Content.ReadAsStringAsync().Result;
+            try
+            {
+                HttpResponseMessage response = this.GetAsync(BaseAddress + url).Result;
+                return response.Content.ReadAsStringAsync().Result;
+            }
+            catch (Exception e)
+            {
+                return "Ups, algo salio mal -> " + e.Message;
+            }
         }
     }
 }
