@@ -47,11 +47,11 @@
                             <input name="endpoint" type="hidden" value="@ViewBag.Endpoint">
 
                             @{
-                                string Disabled = "";
-                                if (Request.QueryString["endpoint"] != null)
-                                {
-                                    Disabled = "disabled";
-                                }
+    string Disabled = "";
+    if (Request.QueryString["endpoint"] != null)
+    {
+        Disabled = "disabled";
+    }
                             }
 
                             <input class="pure-button submit" type="submit" value="Enviar" @Disabled>
@@ -76,3 +76,20 @@
         </div>
     </div>
 </div>
+
+
+
+@section Scripts {
+    <script>
+        $(".configure-buttons a").on('click',
+            function(e) {
+                var url = e.target.href;
+                var hash = url.substring(url.indexOf("#") + 1);
+                $('html, body').animate({
+                        scrollTop: $('#' + hash).offset().top
+                    },
+                    500);
+                return false;
+            });
+    </script>
+}
