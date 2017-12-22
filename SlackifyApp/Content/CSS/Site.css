@@ -134,18 +134,15 @@ re-form label {
 }
 
 .subhead-front {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .subhead-tittle {
-    font-size: 35px;
-    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    font-size: 32px;
 }
 
 .container {
-    margin-top: 5em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 4em;
 }
 
 .footer {
@@ -367,13 +364,6 @@ textarea {
     top: 90px;
     left: 6px;
 }
-
-.pure-button.submit {
-    width: 50% !important;
-}
-
-
-
 
 .logo {
     letter-spacing: 1px;

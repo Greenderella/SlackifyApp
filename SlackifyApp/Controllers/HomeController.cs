@@ -1,11 +1,7 @@
-﻿using System;
+﻿using SlackifyApp.Models;
 using System.Net;
 using System.Net.Mail;
-using System.Web.DynamicData;
-using System.Web.Http;
-using System.Web.Http.Description;
 using System.Web.Mvc;
-using SlackifyApp.Models;
 
 namespace SlackifyApp.Controllers
 {
@@ -86,7 +82,7 @@ namespace SlackifyApp.Controllers
             mailAUsuario.To.Add(mail);
             mailAUsuario.Subject = "Gracias por contactarte con nosotros!";
             mailAUsuario.IsBodyHtml = true;
-            mailAUsuario.Body = "Hola <b>" + nombre + "</b>!<br>Gracias por contactarte con nosotros!<br>Te responderemos a la brevedad.<br>Nos dejaste los siguientes datos:<br>Mail: " + mail + "<br>Mensaje: " + mensaje + "<br><br>Saludos!!!<br><b>La mejor APP</b><img src=\"https://maspublicidades.com/wp-content/uploads/2017/03/contacto.jpg\" />";
+            mailAUsuario.Body = "Hola <b>" + nombre + "</b>!<br>Gracias por contactarte con nosotros!<br>Te responderemos a la brevedad.<br>Nos dejaste los siguientes datos:<br>Mail: " + mail + "<br>Mensaje: " + mensaje + "<br><br>Saludos!!!<br>";
 
             //usamos el mismo objeto cliente smtp que creamos antes
             clienteSmtp.Send(mailAUsuario);
